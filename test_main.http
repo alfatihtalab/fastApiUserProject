@@ -1,0 +1,55 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/users/
+Content-Type: application/json
+Accept: application/json
+X-token: fake-super-secret-token
+
+
+###
+
+
+POST http://127.0.0.1:8000/users/signup/
+Content-Type: application/json
+
+{ "name" : "mo","password": "542", "email": "mo@gmail.com", "account_id": 1001 }
+
+###
+
+GET http://127.0.0.1:8000/users/1
+Accept: application/json
+
+###
+
+PATCH http://127.0.0.1:8000/users/1
+Content-Type: application/json
+
+{ "name" : "alfatih","password": "123456", "email": "alfatih7@gmail.com", "account_type": 101 }
+
+###
+
+
+DELETE http://127.0.0.1:8000/users/1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8000/users/signin/?email=alfatih@gmail.com&password=123456&token=jssica
+Content-Type: application/json
+
+###
+
+
+POST http://127.0.0.1:8000/admin/
+Content-Type: application/json
+
+{"name":"admin2", "password": "admin1993239", "email": "admin2@user.com"}
+
+###
+
+
